@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com Kauan para projetos, oportunidades profissionais, desenvolvimento web e tecnologia.">
+    <title>Contato | Kauan — Desenvolvedor Web</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="assets/CSS/contatos.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Ioni Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">&lt;Kauan<span>/</span>&gt;</a>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="contatos.html" class="active">Contatos</a>
+            </nav>
+
+            <a href="contatos.html" class="btn btn-primary nav-cta">Fale comigo</a>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO INTERNO -->
+        <section class="hero-interno container">
+            <span class="tag">Contato</span>
+            <h1>Vamos conversar?</h1>
+            <p>Estou sempre aberto a novas oportunidades, projetos, networking e conversas sobre tecnologia e desenvolvimento web.</p>
+        </section>
+
+        <!-- LAYOUT PRINCIPAL -->
+        <section class="container contact-layout">
+            
+            <!-- COLUNA ESQUERDA -->
+            <div class="contact-info">
+                
+                <!-- Status -->
+                <div class="availability-badge">
+                    <span class="status-dot"></span>
+                    Disponível para oportunidades
+                </div>
+
+                <!-- Destaque WhatsApp -->
+                <div class="highlight-card">
+                    <h3>Prefere uma conversa rápida?</h3>
+                    <p>Entre em contato diretamente pelo WhatsApp para uma resposta imediata sobre projetos e oportunidades.</p>
+                    <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" class="btn btn-primary">
+                        <i data-lucide="message-circle" width="18"></i> Conversar no WhatsApp
+                    </a>
+                </div>
+
+                <!-- Grid de Redes -->
+                <div class="social-grid">
+                    <a href="https://instagram.com/SEUPERFIL" target="_blank" class="social-card">
+                        <i data-lucide="instagram" width="28" height="28"></i>
+                        <div>
+                            <h3>Instagram</h3>
+                            <span class="social-link">Ver perfil <i data-lucide="arrow-up-right" width="14"></i></span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://github.com/SEUPERFIL" target="_blank" class="social-card">
+                        <i data-lucide="github" width="28" height="28"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <span class="social-link">Ver repositórios <i data-lucide="arrow-up-right" width="14"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="https://linkedin.com/in/SEUPERFIL" target="_blank" class="social-card">
+                        <i data-lucide="linkedin" width="28" height="28"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <span class="social-link">Conectar <i data-lucide="arrow-up-right" width="14"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="https://facebook.com/SEUPERFIL" target="_blank" class="social-card">
+                        <i data-lucide="facebook" width="28" height="28"></i>
+                        <div>
+                            <h3>Facebook</h3>
+                            <span class="social-link">Ver perfil <i data-lucide="arrow-up-right" width="14"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- COLUNA DIREITA (Formulário) -->
+            <div class="form-wrapper">
+                <h2>Envie uma mensagem</h2>
+                
+                <!-- Feedback Divs -->
+                <div id="form-success" class="feedback-message feedback-success">
+                    <i data-lucide="check-circle-2" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i> 
+                    Mensagem enviada com sucesso! Obrigado pelo contato. Responderei assim que possível.
+                </div>
+                <div id="form-error" class="feedback-message feedback-error">
+                    <i data-lucide="alert-circle" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i> 
+                    <span id="error-text">Não foi possível enviar sua mensagem. Verifique os campos e tente novamente.</span>
+                </div>
+
+                <form id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" class="form-control" placeholder="Ex: João da Silva" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" class="form-control" placeholder="Ex: joao@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto <span class="optional">(Opcional)</span></label>
+                        <input type="text" id="assunto" class="form-control" placeholder="Qual o motivo do contato?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" class="form-control" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Enviar mensagem</button>
+                    
+                    <div class="privacy-note">
+                        <i data-lucide="shield-check" width="14"></i>
+                        <span>Seus dados serão utilizados exclusivamente para responder ao seu contato.</span>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">&lt;Kauan<span>/</span>&gt;</a>
+                    <p>Programador & Desenvolvedor Web</p>
+                </div>
+                <nav class="nav-links" style="position: static; height: auto; flex-direction: row; background: none; width: auto;">
+                    <a href="index.html">Home</a>
+                    <a href="projetos.html">Projetos</a>
+                    <a href="contatos.html">Contatos</a>
+                </nav>
+                <div class="footer-social">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://whatsapp.com" target="_blank" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Kauan. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="assets/JS/contatos.js"></script>
+</body>
+</html>

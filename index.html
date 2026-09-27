@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio profissional de Kauan, Programador e Desenvolvedor Web. Conheça projetos, habilidades e tecnologias utilizadas no desenvolvimento de experiências digitais.">
+    <title>Kauan | Programador & Desenvolvedor Web</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="assets/CSS/index.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Ioni Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">&lt;Kauan<span>/</span>&gt;</a>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="contatos.html">Contatos</a>
+            </nav>
+
+            <a href="contatos.html" class="btn btn-primary nav-cta">Fale comigo</a>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text fade-up">
+                <span class="tagline">Olá, eu sou Kauan 👋</span>
+                <h1>Programador & <br>Desenvolvedor Web</h1>
+                <p>Desenvolvo interfaces modernas, responsivas e funcionais, transformando ideias em experiências digitais simples e eficientes.</p>
+                <div class="hero-actions">
+                    <a href="projetos.html" class="btn btn-primary">Ver meus projetos</a>
+                    <a href="contatos.html" class="btn btn-secondary">Entrar em contato</a>
+                    <a href="https://github.com" target="_blank" class="github-link">
+                        <i data-lucide="github" width="20"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual fade-up" style="transition-delay: 200ms;">
+                <div class="mockup-header">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="code-lines">
+                    <p><span>const</span> developer = {</p>
+                    <p>&nbsp;&nbsp;name: 'Kauan',</p>
+                    <p>&nbsp;&nbsp;role: 'Web Developer',</p>
+                    <p>&nbsp;&nbsp;skills: ['HTML', 'CSS', 'JS', 'C'],</p>
+                    <p>&nbsp;&nbsp;passion: 'Criar interfaces incríveis'</p>
+                    <p>};</p>
+                    <br>
+                    <p><span>developer</span>.buildFuture();</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="container fade-up">
+        <h2>Sobre mim</h2>
+        <div class="sobre-content">
+            <p>Sou um estudante de Ciência da Computação com um forte interesse no ecossistema de desenvolvimento web. Minha jornada na programação começou com a curiosidade de entender como a web funciona, o que rapidamente se transformou em uma paixão por construir projetos reais e resolver problemas através do código.</p>
+            <p>Atualmente, me dedico ao desenvolvimento de projetos pessoais para aprimorar minhas habilidades, buscando constantemente evolução profissional e mantendo-me atualizado com as novas tecnologias e melhores práticas do mercado.</p>
+            <a href="projetos.html" class="btn btn-secondary">Conheça meus projetos</a>
+        </div>
+    </section>
+
+    <!-- TECNOLOGIAS -->
+    <section class="container fade-up">
+        <h2>Tecnologias que utilizo</h2>
+        <div class="tech-grid">
+
+            <div class="tech-card"><ion-icon size="large" name="logo-html5"></ion-icon><span>HTML5</span></div>
+
+            <div class="tech-card"><ion-icon size="large" name="logo-css3"></ion-icon><span>CSS3</span></div>
+
+            <div class="tech-card"><ion-icon size="large" name="logo-javascript"></ion-icon><span>JavaScript</span></div>
+
+            <div class="tech-card"><ion-icon size="large" name="code-slash"></ion-icon><span>C++</span></div>
+
+            <div class="tech-card"><ion-icon size="large" name="git-branch-outline"></ion-icon><span>Git</span></div>
+
+            <div class="tech-card"><ion-icon size="large" name="logo-github"></ion-icon><span>GitHub</span></div>
+
+            <div class="tech-card"><ion-icon size="large" name="logo-wordpress"></ion-icon><span>WordPress</span></div>
+
+            <br><br>
+        </div>
+    </section>
+
+    <!-- O QUE FAÇO -->
+    <section class="container fade-up">
+        <div class="section-header">
+            <h2>O que eu faço</h2>
+            <p>Soluções digitais focadas em performance, design e conversão.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i data-lucide="globe" class="service-icon" width="32" height="32"></i>
+                <h3>Desenvolvimento Web</h3>
+                <p>Criação de sites modernos, responsivos e funcionais, preparados para oferecer a melhor experiência em qualquer dispositivo.</p>
+            </div>
+            <div class="service-card">
+                <i data-lucide="layout" class="service-icon" width="32" height="32"></i>
+                <h3>Front-End</h3>
+                <p>Desenvolvimento de interfaces fluídas e interativas utilizando HTML, CSS e JavaScript estruturados e otimizados.</p>
+            </div>
+            <div class="service-card">
+                <i data-lucide="mouse-pointer-click" class="service-icon" width="32" height="32"></i>
+                <h3>Landing Pages</h3>
+                <p>Criação de páginas focadas em apresentação profissional, produtos, serviços ou alta conversão.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS EM DESTAQUE -->
+    <section class="container fade-up">
+        <div class="section-header">
+            <h2>Projetos em destaque</h2>
+            <p>Alguns projetos que desenvolvi durante meus estudos e projetos pessoais.</p>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Projeto 1 -->
+            <div class="project-card">
+                <div class="project-img"><i data-lucide="calculator" width="48" height="48"></i></div>
+                <div class="project-content">
+                    <h3>Calculadora JavaScript</h3>
+                    <p>Uma calculadora web interativa com design limpo, suporte a operações complexas e histórico.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary">Ver projeto</a>
+                        <a href="#" class="btn btn-secondary">Código <i data-lucide="github" width="16"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Projeto 2 -->
+            <div class="project-card">
+                <div class="project-img"><i data-lucide="scissors" width="48" height="48"></i></div>
+                <div class="project-content">
+                    <h3>Site de Barbearia</h3>
+                    <p>Landing page responsiva para barbearia local, incluindo tabela de preços, galeria e botão para agendamento via WhatsApp.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary">Ver projeto</a>
+                        <a href="#" class="btn btn-secondary">Código <i data-lucide="github" width="16"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Projeto 3 -->
+            <div class="project-card">
+                <div class="project-img"><i data-lucide="shopping-bag" width="48" height="48"></i></div>
+                <div class="project-content">
+                    <h3>Street na Moda</h3>
+                    <p>Interface e-commerce para uma marca de roupas streetwear com foco em usabilidade mobile e catálogo dinâmico.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-primary">Ver projeto</a>
+                        <a href="#" class="btn btn-secondary">Código <i data-lucide="github" width="16"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="projetos.html" class="view-all">Ver todos os projetos <i data-lucide="arrow-right" width="20"></i></a>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="container fade-up">
+        <h2>Diferenciais</h2>
+        <div class="diff-grid">
+            <div class="diff-item">
+                <i data-lucide="smartphone" class="diff-icon"></i>
+                <div>
+                    <h3>Responsividade</h3>
+                    <p>Sites preparados e perfeitamente adaptados para celular, tablet e desktop.</p>
+                </div>
+            </div>
+            <div class="diff-item">
+                <i data-lucide="users" class="diff-icon"></i>
+                <div>
+                    <h3>UX/UI</h3>
+                    <p>Interfaces pensadas para facilitar a navegação do usuário final.</p>
+                </div>
+            </div>
+            <div class="diff-item">
+                <i data-lucide="code" class="diff-icon"></i>
+                <div>
+                    <h3>Código organizado</h3>
+                    <p>Estrutura de código limpa, semântica e de fácil manutenção.</p>
+                </div>
+            </div>
+            <div class="diff-item">
+                <i data-lucide="trending-up" class="diff-icon"></i>
+                <div>
+                    <h3>Evolução constante</h3>
+                    <p>Estudo contínuo de novas tecnologias e implementação de boas práticas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <!-- CTA FINAL -->
+    <section class="container cta-section fade-up">
+        <div class="cta-box">
+            <h2>Vamos transformar uma ideia em projeto?</h2>
+            <p>Estou disponível para novas oportunidades. Se você é um recrutador procurando um novo talento ou uma empresa precisando de um site, vamos conversar.</p>
+            <div class="cta-actions">
+                <a href="contatos.html" class="btn btn-primary">Entrar em contato</a>
+                <a href="https://github.com" target="_blank" class="btn btn-secondary"><i data-lucide="arrow-right" width="18"></i> Ver GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">&lt;Kauan<span>/</span>&gt;</a>
+                    <p>Programador & Desenvolvedor Web</p>
+                </div>
+                <nav class="nav-links" style="position: static; height: auto; flex-direction: row; background: none; width: auto;">
+                    <a href="index.html">Home</a>
+                    <a href="projetos.html">Projetos</a>
+                    <a href="contatos.html">Contatos</a>
+                </nav>
+                <div class="footer-social">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://whatsapp.com" target="_blank" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Kauan. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="assets/JS/index.js"></script>
+</body>
+</html>
