@@ -133,6 +133,8 @@
 
         /* Busca */
         .search-box {
+            display: flex;
+            align-items: center;
             position: relative; flex-grow: 1; max-width: 300px; min-width: 250px;
         }
         .search-box i {
