@@ -67,7 +67,7 @@
         .header-content { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-light); }
         .logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links { display: flex; gap: 30px; align-items: center; padding-left: 40px; }
         .nav-links a { color: var(--text-muted); font-weight: 500; transition: var(--transition); }
         .nav-links a:hover, .nav-links a.active { color: var(--text-light); }
         .menu-toggle { display: none; background: none; border: none; color: var(--text-light); cursor: pointer; }
