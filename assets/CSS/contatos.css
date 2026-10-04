@@ -50,7 +50,7 @@
         .btn-secondary { background-color: transparent; color: var(--text-light); border: 1px solid var(--border); }
         .btn-secondary:hover { background-color: var(--bg-card); border-color: var(--text-muted); transform: translateY(-2px); }
         .btn-block { width: 100%; }
-        .bnt-preto { background-color: black; color: black; cursor: auto;}
+        .bnt-preto { background-color: black; color: black; cursor: default;}
 
         /* === HEADER === */
         header {
