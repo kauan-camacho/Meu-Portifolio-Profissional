@@ -24,6 +24,7 @@
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 
+    <link rel="stylesheet" href="assets/CSS/project-viewer.css">
 </head>
 <body>
 
@@ -150,47 +151,38 @@
         <div class="projects-grid">
             <!-- Projeto 1 -->
             <div class="project-card">
-                <div class="project-img"><i data-lucide="calculator" width="48" height="48"></i></div>
+                <div class="project-img"><img src="assets/img/projetos/projeto02.png" alt="Captura do projeto Hello — Olá, Mundo" width="1600" height="900" loading="lazy"></div>
                 <div class="project-content">
-                    <h3>Calculadora JavaScript</h3>
-                    <p>Uma calculadora web interativa com design limpo, suporte a operações complexas e histórico.</p>
+                    <h3>Projeto Hello World</h3>
+                    <p>Landing page 100% funcional com design limpo, suporte a varias linguagens e falas com ia interativas.</p>
                     <div class="tech-tags">
                         <span>HTML</span><span>CSS</span><span>JavaScript</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-primary">Ver projeto</a>
-                        <a href="#" class="btn btn-secondary">Código <i data-lucide="github" width="16"></i></a>
-                    </div>
+                    <div class="project-links"><button type="button" class="btn btn-primary btn-sm" data-project="calculadora" data-view="preview">Ver projeto</button><button type="button" class="btn btn-secondary btn-sm" data-project="calculadora" data-view="code">Código</button></div>
                 </div>
             </div>
             <!-- Projeto 2 -->
             <div class="project-card">
-                <div class="project-img"><i data-lucide="scissors" width="48" height="48"></i></div>
+                <div class="project-img"><img src="assets/img/projetos/projeto03.png" alt="Captura do projeto Grão &amp; Fermento — Padaria Artesanal" width="1600" height="900" loading="lazy"></div>
                 <div class="project-content">
-                    <h3>Site de Barbearia</h3>
-                    <p>Landing page responsiva para barbearia local, incluindo tabela de preços, galeria e botão para agendamento via WhatsApp.</p>
+                    <h3>Padaria Grão e Fermento</h3>
+                    <p>Uma pagina web completa e responsiva para Padaria local, incluindo todo o cardapio com preços e uma integração completa via WhatsApp.</p>
                     <div class="tech-tags">
-                        <span>HTML</span><span>CSS</span>
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-primary">Ver projeto</a>
-                        <a href="#" class="btn btn-secondary">Código <i data-lucide="github" width="16"></i></a>
-                    </div>
+                    <div class="project-links"><button type="button" class="btn btn-primary btn-sm" data-project="barbearia" data-view="preview">Ver projeto</button><button type="button" class="btn btn-secondary btn-sm" data-project="barbearia" data-view="code">Código</button></div>
                 </div>
             </div>
             <!-- Projeto 3 -->
             <div class="project-card">
-                <div class="project-img"><i data-lucide="shopping-bag" width="48" height="48"></i></div>
+                <div class="project-img"><img src="assets/img/projetos/projeto04.png" alt="Captura do projeto Aurora Femme" width="1600" height="900" loading="lazy"></div>
                 <div class="project-content">
-                    <h3>Street na Moda</h3>
-                    <p>Interface e-commerce para uma marca de roupas streetwear com foco em usabilidade mobile e catálogo dinâmico.</p>
+                    <h3>Aurora Femme</h3>
+                    <p>Interface e-commerce para uma marca de roupas feminina com foco em novidades do mundo da moda feminina e catálogo dinâmico e completo.</p>
                     <div class="tech-tags">
                         <span>HTML</span><span>CSS</span><span>JavaScript</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-primary">Ver projeto</a>
-                        <a href="#" class="btn btn-secondary">Código <i data-lucide="github" width="16"></i></a>
-                    </div>
+                    <div class="project-links"><button type="button" class="btn btn-primary btn-sm" data-project="street" data-view="preview">Ver projeto</button><button type="button" class="btn btn-secondary btn-sm" data-project="street" data-view="code">Código</button></div>
                 </div>
             </div>
         </div>
@@ -271,5 +263,6 @@
 
     <!-- SCRIPTS -->
     <script src="assets/JS/index.js"></script>
+    <script src="assets/JS/project-viewer.js"></script>
 </body>
 </html>

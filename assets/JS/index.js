@@ -1,6 +1,6 @@
 
         // Inicializar ícones Lucide
-        lucide.createIcons();
+        window.lucide?.createIcons();
 
         // Lógica do Header Sticky com efeito Blur
         const header = document.getElementById('header');
@@ -24,7 +24,7 @@
             } else {
                 menuToggle.innerHTML = '<i data-lucide="menu"></i>';
             }
-            lucide.createIcons();
+            window.lucide?.createIcons();
         });
 
         // Scroll Reveal Animations (Animações sutis ao rolar)

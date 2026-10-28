@@ -206,3 +206,21 @@
         .footer-social a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: var(--bg-card); transition: var(--transition); }
         .footer-social a:hover { background-color: var(--accent); transform: translateY(-2px); }
         .footer-bottom { text-align: center; padding-top: 24px; border-top: 1px solid var(--border); font-size: 0.875rem; color: var(--text-muted); }
+/* Formulário de proposta: poucos campos e escolha direta do canal. */
+.contact-layout > * { min-width: 0; }
+.form-eyebrow { display: block; font-size: .7rem; font-weight: 600; letter-spacing: .12em; color: #60a5fa; margin-bottom: 12px; }
+.form-wrapper h2 { margin-bottom: 12px; }
+.form-intro { font-size: .95rem; margin-bottom: 28px; }
+.field-help { font-size: .8rem; color: var(--text-muted); }
+.send-actions { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.btn-whatsapp { background: #12864b; color: white; }
+.btn-whatsapp:hover { background: #106f40; transform: translateY(-2px); }
+.send-note { font-size: .8rem; color: var(--text-muted); margin-top: 16px; }
+.form-status { font-size: .9rem; color: #cbd5e1; padding: 16px; margin-top: 16px; border: 1px solid var(--border); border-radius: 8px; }
+.form-status a { color: #93c5fd; text-decoration: underline; }
+#contact-form .feedback-message:not([hidden]) { display: block; }
+#contact-form [hidden] { display: none; }
+.form-control[aria-invalid="true"] { border-color: var(--error); }
+.btn:focus-visible, .form-control:focus-visible, .form-status a:focus-visible { outline: 3px solid #93c5fd; outline-offset: 3px; }
+@media (max-width: 992px) { .form-wrapper { grid-row: 1; } }
+@media (max-width: 500px) { .form-wrapper { padding: 24px 20px; } .hero-interno { padding: 140px 24px 40px; } }

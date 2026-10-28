@@ -1,6 +1,6 @@
 
         // Inicializar ícones
-        lucide.createIcons();
+        window.lucide?.createIcons();
 
         // Lógica do Header Mobile (Igual à Home)
         const menuToggle = document.getElementById('menu-toggle');
@@ -13,69 +13,53 @@
             } else {
                 menuToggle.innerHTML = '<i data-lucide="menu"></i>';
             }
-            lucide.createIcons();
+            window.lucide?.createIcons();
         });
 
-        // SISTEMA DE FILTROS E BUSCA
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const searchInput = document.getElementById('search-input');
-        const projectCards = document.querySelectorAll('.project-card');
-        const emptyState = document.getElementById('empty-state');
-        const clearBtn = document.getElementById('clear-filters');
-        
-        let activeCategory = 'todos';
-
-        // Função para atualizar visualização
-        function filterProjects() {
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            let visibleCount = 0;
-
-            projectCards.forEach(card => {
-                const categoryData = card.getAttribute('data-category');
-                const searchData = card.getAttribute('data-search');
-
-                // Verifica Categoria
-                const matchCategory = activeCategory === 'todos' || categoryData.includes(activeCategory);
-                
-                // Verifica Busca
-                const matchSearch = searchTerm === '' || searchData.includes(searchTerm);
-
-                if (matchCategory && matchSearch) {
-                    card.style.display = 'flex'; // Volta ao padrão flex do card
-                    visibleCount++;
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-            // Mostra/Oculta Empty State
-            if (visibleCount === 0) {
-                emptyState.style.display = 'block';
-            } else {
-                emptyState.style.display = 'none';
-            }
-        }
-
-        // Eventos dos botões de categoria
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove classe active de todos
-                filterBtns.forEach(b => b.classList.remove('active'));
-                // Adiciona no clicado
-                btn.classList.add('active');
-                activeCategory = btn.getAttribute('data-filter');
-                filterProjects();
-            });
-        });
-
-        // Evento da barra de busca
-        searchInput.addEventListener('input', filterProjects);
-
-        // Limpar Filtros
-        clearBtn.addEventListener('click', () => {
-            searchInput.value = '';
-            filterBtns.forEach(b => b.classList.remove('active'));
-            document.querySelector('[data-filter="todos"]').classList.add('active');
-            activeCategory = 'todos';
-            filterProjects();
-        });
+// As tecnologias são extraídas das tags visíveis dos cartões.
+const filterBtns = document.querySelectorAll('.filter-btn');
+const searchInput = document.getElementById('search-input');
+const emptyState = document.getElementById('empty-state');
+const clearBtn = document.getElementById('clear-filters');
+let activeCategory = 'todos';
+function normalizeText(value) {
+    return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+}
+const projects = Array.from(document.querySelectorAll('.project-card'), card => {
+    const technologies = Array.from(card.querySelectorAll('.tech-tags span'), tag => normalizeText(tag.textContent));
+    const filters = new Set((card.dataset.category || '').split(/\s+/).filter(Boolean));
+    if (technologies.some(tech => /^html5?$/.test(tech)) && technologies.some(tech => /^css3?$/.test(tech))) filters.add('html-css');
+    if (technologies.includes('javascript')) filters.add('javascript');
+    const text = ['h3', '.card-desc', '.card-category', '.tech-tags'].map(selector => card.querySelector(selector)?.textContent || '').join(' ');
+    const aliases = [];
+    if (filters.has('html-css')) aliases.push('html css html/css');
+    if (filters.has('javascript')) aliases.push('js');
+    return { card, filters, search: normalizeText(text + ' ' + aliases.join(' ')) };
+});
+function filterProjects() {
+    const terms = normalizeText(searchInput.value).split(/\s+/).filter(Boolean);
+    let count = 0;
+    projects.forEach(({ card, filters, search }) => {
+        const matches = (activeCategory === 'todos' || filters.has(activeCategory)) && terms.every(term => search.includes(term));
+        card.style.display = matches ? 'flex' : 'none';
+        if (matches) count++;
+    });
+    emptyState.style.display = count ? 'none' : 'block';
+}
+function selectFilter(category) {
+    activeCategory = category;
+    filterBtns.forEach(button => {
+        const selected = button.dataset.filter === category;
+        button.classList.toggle('active', selected);
+        button.setAttribute('aria-pressed', String(selected));
+    });
+    filterProjects();
+}
+filterBtns.forEach(button => button.addEventListener('click', () => selectFilter(button.dataset.filter)));
+searchInput.addEventListener('input', filterProjects);
+clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    selectFilter('todos');
+    searchInput.focus();
+});
+selectFilter('todos');

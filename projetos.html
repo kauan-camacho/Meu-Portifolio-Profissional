@@ -24,6 +24,7 @@
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 
+    <link rel="stylesheet" href="assets/CSS/project-viewer.css">
 </head>
 <body>
 
@@ -55,16 +56,16 @@
             
             <div class="indicators">
                 <div class="indicator-item">
-                    <div class="indicator-value">12</div>
+                    <div class="indicator-value">6</div>
                     <div class="indicator-label">Projetos desenvolvidos</div>
                 </div>
                 <div class="indicator-item">
-                    <div class="indicator-value">8+</div>
+                    <div class="indicator-value">+3</div>
                     <div class="indicator-label">Tecnologias utilizadas</div>
                 </div>
                 <div class="indicator-item">
-                    <div class="indicator-value">5</div>
-                    <div class="indicator-label">Projetos Web</div>
+                    <div class="indicator-value">4</div>
+                    <div class="indicator-label">Projetos Web concluídos</div>
                 </div>
             </div>
         </section>
@@ -77,12 +78,11 @@
                     <button class="filter-btn" data-filter="web">Web</button>
                     <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
                     <button class="filter-btn" data-filter="javascript">JavaScript</button>
-                    <button class="filter-btn" data-filter="c">C/C++</button>
-                    <button class="filter-btn" data-filter="estudos">Estudos</button>
+                    <button class="filter-btn" data-filter="construcao">Em construção</button>
                 </div>
                 
                 <div class="search-box">
-                    <i data-lucide="search" width="20"></i><input type="text" id="search-input" placeholder="Buscar projeto, tecnologia...">
+                    <i data-lucide="search" width="20"></i><input type="text" id="search-input" aria-label="Buscar por nome, descrição ou tecnologia" placeholder="Buscar projeto, tecnologia...">
                 </div>
             </div>
         </section>
@@ -91,106 +91,98 @@
         <section class="container">
             <div class="projects-grid" id="projects-grid">
                 
-                <!-- PROJETO DESTAQUE -->
-                <article class="project-card featured" data-category="web javascript" data-search="site empresarial javascript web frontend corporativo">
-                    <div class="img-wrapper">
-                        <span class="badge">Projeto em destaque</span>
-                        <i data-lucide="building-2" width="80" height="80"></i>
-                    </div>
+                <!-- DESTAQUE 1: primeira fileira no desktop -->
+                <article class="project-card featured" data-category="web">
+                    <div class="img-wrapper"><span class="badge">Projeto em destaque</span><img src="assets/img/projetos/projeto01.png" alt="Captura do projeto Lumina Pizzeria Italiana" width="1600" height="900" loading="lazy"></div>
                     <div class="card-content">
-                        <span class="card-category">Web Development</span>
-                        <h3>Site Empresarial</h3>
-                        <p class="card-desc">Projeto completo de um site institucional para uma empresa fictícia, focado em alta performance, SEO e uma interface corporativa moderna com animações responsivas.</p>
+                        <span class="card-category">Web Page</span>
+                        <h3>Lumina Pizzaria</h3>
+                        <p class="card-desc">Projeto completo de um site funcional para uma pizzaria fictícia, focado em alta performance, cardapio e pedidos com integração direta via Whatsapp.</p>
                         <div class="tech-tags">
                             <span>HTML5</span>
                             <span>CSS3</span>
                             <span>JavaScript</span>
                         </div>
-                        <div class="card-actions">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver projeto</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm"><i data-lucide="github" width="16"></i> Código</a>
-                        </div>
+                        <div class="card-actions"><button type="button" class="btn btn-primary btn-sm" data-project="empresarial" data-view="preview">Ver projeto</button><button type="button" class="btn btn-secondary btn-sm" data-project="empresarial" data-view="code">Código</button></div>
                     </div>
                 </article>
 
-                <!-- PROJETO 2 -->
-                <article class="project-card" data-category="javascript estudos" data-search="calculadora javascript app logica web">
-                    <div class="img-wrapper">
-                        <i data-lucide="calculator" width="64" height="64"></i>
-                    </div>
+                <!-- DESTAQUE 2 -->
+                <article class="project-card featured" data-category="web">
+                    <div class="img-wrapper"><span class="badge">Projeto em destaque</span><img src="assets/img/projetos/projeto02.png" alt="Captura do projeto Hello — Olá, Mundo" width="1600" height="900" loading="lazy"></div>
                     <div class="card-content">
-                        <span class="card-category">JavaScript</span>
-                        <h3>Calculadora Interativa</h3>
-                        <p class="card-desc">Uma calculadora web desenvolvida com JavaScript puro (Vanilla), oferecendo suporte a operações matemáticas complexas, histórico de contas e design minimalista dark mode.</p>
+                        <span class="card-category">Landing Page</span>
+                        <h3>Projeto Hello World</h3>
+                        <p class="card-desc">Landing page 100% funcional com design limpo, suporte a varias linguagens e falas com ia interativas...</p>
                         <div class="tech-tags">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
-                        <div class="card-actions">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver projeto</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm"><i data-lucide="github" width="16"></i> Código</a>
-                        </div>
+                        <div class="card-actions"><button type="button" class="btn btn-primary btn-sm" data-project="calculadora" data-view="preview">Ver projeto</button><button type="button" class="btn btn-secondary btn-sm" data-project="calculadora" data-view="code">Código</button></div>
                     </div>
                 </article>
 
-                <!-- PROJETO 3 -->
-                <article class="project-card" data-category="web html-css" data-search="site barbearia html css landing page">
-                    <div class="img-wrapper">
-                        <i data-lucide="scissors" width="64" height="64"></i>
-                    </div>
+                <!-- DESTAQUE 3 -->
+                <article class="project-card featured" data-category="web">
+                    <div class="img-wrapper"><span class="badge">Projeto em destaque</span><img src="assets/img/projetos/projeto03.png" alt="Captura do projeto Grão &amp; Fermento — Padaria Artesanal" width="1600" height="900" loading="lazy"></div>
                     <div class="card-content">
-                        <span class="card-category">Landing Page</span>
-                        <h3>Site de Barbearia</h3>
-                        <p class="card-desc">Site institucional e landing page criada para uma barbearia local. Possui tabela de preços dinâmica, galeria de cortes e direcionamento direto para agendamento no WhatsApp.</p>
+                        <span class="card-category">Web Page</span>
+                        <h3>Padaria Grão e Fermento</h3>
+                        <p class="card-desc">Uma pagina web completa e responsiva para Padaria local, incluindo todo o cardapio com preços e uma integração completa via WhatsApp.</p>
                         <div class="tech-tags">
                             <span>HTML</span>
                             <span>CSS</span>
+                            <span>JavaScript</span>
                         </div>
-                        <div class="card-actions">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver projeto</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm"><i data-lucide="github" width="16"></i> Código</a>
-                        </div>
+                        <div class="card-actions"><button type="button" class="btn btn-primary btn-sm" data-project="barbearia" data-view="preview">Ver projeto</button><button type="button" class="btn btn-secondary btn-sm" data-project="barbearia" data-view="code">Código</button></div>
                     </div>
                 </article>
 
                 <!-- PROJETO 4 -->
-                <article class="project-card" data-category="web javascript" data-search="street na moda e-commerce loja roupas web">
-                    <div class="img-wrapper">
-                        <i data-lucide="shopping-bag" width="64" height="64"></i>
-                    </div>
+                <article class="project-card" data-category="web">
+                    <div class="img-wrapper"><img src="assets/img/projetos/projeto04.png" alt="Captura do projeto Aurora Femme" width="1600" height="900" loading="lazy"></div>
                     <div class="card-content">
                         <span class="card-category">E-commerce UI</span>
-                        <h3>Street na Moda</h3>
-                        <p class="card-desc">Interface de e-commerce voltada para o nicho de streetwear e moda urbana. Foco total em usabilidade mobile-first e exibição de catálogo de produtos.</p>
+                        <h3>Aurora Femme</h3>
+                        <p class="card-desc">Interface e-commerce para uma marca de roupas feminina com foco em novidades do mundo da moda feminina e catálogo dinâmico e completo.</p>
                         <div class="tech-tags">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
-                        <div class="card-actions">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver projeto</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm"><i data-lucide="github" width="16"></i> Código</a>
-                        </div>
+                        <div class="card-actions"><button type="button" class="btn btn-primary btn-sm" data-project="street" data-view="preview">Ver projeto</button><button type="button" class="btn btn-secondary btn-sm" data-project="street" data-view="code">Código</button></div>
                     </div>
                 </article>
 
-                <!-- PROJETO 5 (Exemplo em C) -->
-                <article class="project-card" data-category="c estudos" data-search="sistema gerenciamento c algoritmos cli">
-                    <div class="img-wrapper">
-                        <i data-lucide="terminal-square" width="64" height="64"></i>
-                    </div>
+                <!-- PROJETO 5 (Em construção) -->
+                <article class="project-card" data-category="web construcao">
+                    <div class="img-wrapper"><img src="assets/img/projetos/projeto00.png" alt="Captura do projeto iMovi — Casas Planejadas" width="1600" height="900" loading="lazy"></div>
                     <div class="card-content">
-                        <span class="card-category">Software</span>
-                        <h3>Sistema CLI em C</h3>
-                        <p class="card-desc">Projeto acadêmico de gerenciamento de estoque construído inteiramente em C via linha de comando, explorando alocação dinâmica e estruturas de dados.</p>
+                        <span class="card-category">Em construção</span>
+                        <h3>Projeto Fictício</h3>
+                        <p class="card-desc">Esse projeto está sendo construído, em breve estará disponível para a visibilidade.</p>
                         <div class="tech-tags">
-                            <span>C / C++</span>
-                            <span>CLI</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
                         </div>
-                        <div class="card-actions">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm"><i data-lucide="github" width="16"></i> Código Fonte</a>
+                        <div class="card-actions"><button type="button" class="btn btn-primary btn-sm" data-project="cli" data-view="preview">Ver projeto</button><button type="button" class="btn btn-secondary btn-sm" data-project="cli" data-view="code">Código</button></div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="web construcao">
+                    <div class="img-wrapper"><img src="assets/img/projetos/projeto00.png" alt="Miniatura ilustrativa de Street na Moda" width="800" height="450" loading="lazy"></div>
+                    <div class="card-content">
+                        <span class="card-category">Em construção</span>
+                        <h3>Projeto Fictício</h3>
+                        <p class="card-desc">Esse projeto está sendo construído, em breve estará disponível para a visibilidade.</p>
+                        <div class="tech-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
                         </div>
+                        <div class="card-actions"><button type="button" class="btn btn-primary btn-sm" data-project="ficticio2" data-view="preview">Ver projeto</button><button type="button" class="btn btn-secondary btn-sm" data-project="ficticio2" data-view="code">Código</button></div>
                     </div>
                 </article>
 
@@ -244,5 +236,6 @@
 
     <!-- SCRIPTS -->
     <script src="assets/JS/projetos.js"></script>
+    <script src="assets/JS/project-viewer.js"></script>
 </body>
 </html>

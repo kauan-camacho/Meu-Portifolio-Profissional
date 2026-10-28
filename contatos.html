@@ -69,7 +69,7 @@
                 <!-- Destaque WhatsApp -->
                 <div class="highlight-card">
                     <h3>Prefere uma conversa rápida?</h3>
-                    <p>Entre em contato diretamente pelo WhatsApp para uma resposta imediata sobre projetos e oportunidades.</p>
+                    <p>Fale comigo pelo WhatsApp sobre sua ideia, projeto ou oportunidade.</p>
                     <a href="https://wa.me/5519994906750?text=Ol%C3%A1%20Kauan%20vim%20pelo%20seu%20portf%C3%B3lio%2C%20podemos%20conversar%20%3F" target="_blank" class="btn btn-primary">
                         <ion-icon name="logo-whatsapp"></ion-icon> Conversar no WhatsApp
                     </a>
@@ -114,45 +114,32 @@
 
             <!-- COLUNA DIREITA (Formulário) -->
             <div class="form-wrapper">
-                <h2>Envie uma mensagem</h2>
-                
-                <!-- Feedback Divs -->
-                <div id="form-success" class="feedback-message feedback-success">
-                    <i data-lucide="check-circle-2" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i> 
-                    Mensagem enviada com sucesso! Obrigado pelo contato. Responderei assim que possível.
-                </div>
-                <div id="form-error" class="feedback-message feedback-error">
-                    <i data-lucide="alert-circle" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i> 
-                    <span id="error-text">Não foi possível enviar sua mensagem. Verifique os campos e tente novamente.</span>
-                </div>
-
+                <span class="form-eyebrow">VAMOS TIRAR SUA IDEIA DO PAPEL</span>
+                <h2>Conte o que você precisa</h2>
+                <p class="form-intro">Uma ideia, um projeto ou uma oportunidade? Escreva abaixo e escolha como conversar.</p>
                 <form id="contact-form" novalidate>
                     <div class="form-group">
-                        <label for="nome">Nome completo</label>
-                        <input type="text" id="nome" class="form-control" placeholder="Ex: João da Silva" required>
+                        <label for="nome">Seu nome</label>
+                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Como posso chamar você?" autocomplete="name" maxlength="100" required>
                     </div>
-
                     <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" class="form-control" placeholder="Ex: joao@email.com" required>
+                        <label for="email">Seu e-mail <span class="optional">(opcional)</span></label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="voce@exemplo.com" autocomplete="email" maxlength="254" aria-describedby="email-help">
+                        <small id="email-help" class="field-help">Se quiser, deixe um e-mail para retorno.</small>
                     </div>
-
                     <div class="form-group">
-                        <label for="assunto">Assunto <span class="optional">(Opcional)</span></label>
-                        <input type="text" id="assunto" class="form-control" placeholder="Qual o motivo do contato?">
+                        <label for="mensagem">Como posso ajudar?</label>
+                        <textarea id="mensagem" name="mensagem" class="form-control" rows="5" maxlength="2500" placeholder="Conte sua ideia ou proposta. Se já souber, inclua o prazo e o orçamento que tem em mente." aria-describedby="message-help" required></textarea>
+                        <small id="message-help" class="field-help">Só o nome e a mensagem são obrigatórios.</small>
                     </div>
-
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" class="form-control" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    <p id="form-error" class="feedback-message feedback-error" role="alert" hidden></p>
+                    <div class="send-actions" role="group" aria-label="Escolha como enviar sua mensagem">
+                        <button type="submit" name="channel" value="whatsapp" class="btn btn-whatsapp"><ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon> Enviar pelo WhatsApp</button>
+                        <button type="submit" name="channel" value="gmail" class="btn btn-secondary"><i data-lucide="mail" width="18" aria-hidden="true"></i> Enviar pelo Gmail</button>
                     </div>
-
-                    <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Enviar mensagem</button>
-                    
-                    <div class="privacy-note">
-                        <i data-lucide="shield-check" width="14"></i>
-                        <span>Seus dados serão utilizados exclusivamente para responder ao seu contato.</span>
-                    </div>
+                    <p class="send-note">A mensagem será preenchida na plataforma escolhida. Você revisa e confirma o envio por lá.</p>
+                    <p id="form-status" class="form-status" role="status" hidden></p>
+                    <noscript><p class="send-note">Ative o JavaScript para preparar sua mensagem ou use o link direto do WhatsApp ao lado.</p></noscript>
                 </form>
             </div>
         </section>
